@@ -6,8 +6,10 @@ import java.io.IOException;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.events.EventFiringWebDriver;
 
@@ -23,7 +25,8 @@ public class TestBase {
 	public static Properties prop;
 	public  static EventFiringWebDriver e_driver;
 	public static WebEventListener eventListener;
-	
+	public String holidayURL="https://www.yatra.com/holidays";
+	public JavascriptExecutor jse;
 	public TestBase(){
 		try {
 			prop = new Properties();
@@ -43,9 +46,11 @@ public class TestBase {
 		
 		if(browserName.equals("chrome")){
 			WebDriverManager.chromedriver().setup();
-			  driver = new ChromeDriver();
-			//System.setProperty("webdriver.chrome.driver", "/Users/naveenkhunteta/Downloads/chromedriver");	
-			//driver = new ChromeDriver(); 
+			ChromeOptions opt = new ChromeOptions();
+			opt.addArguments("disable-notifications");
+			opt.setExperimentalOption("excludeSwitches", new String[] { "enable-automation" });
+			driver = new ChromeDriver(opt);
+
 		}
 		else if(browserName.equals("FF")){
 			System.setProperty("webdriver.gecko.driver", "/Users/naveenkhunteta/Documents/SeleniumServer/geckodriver");	

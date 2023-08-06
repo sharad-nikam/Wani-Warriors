@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-07-26T20:56:33 PDT" name="Default suite" finished-at="2023-07-26T20:56:51 PDT" duration-ms="17632">
+  <suite started-at="2023-08-06T10:07:43 IST" name="Default suite" finished-at="2023-08-06T10:08:15 IST" duration-ms="31834">
     <groups>
     </groups>
-    <test started-at="2023-07-26T20:56:33 PDT" name="Default test" finished-at="2023-07-26T20:56:51 PDT" duration-ms="17632">
-      <class name="com.yatra.qa.TestCase.LoginPageTest">
-        <test-method is-config="true" signature="Setup()[pri:0, instance:com.yatra.qa.TestCase.LoginPageTest@738dc9b]" started-at="2023-07-26T20:56:34 PDT" name="Setup" finished-at="2023-07-26T20:56:46 PDT" duration-ms="12535" status="PASS">
+    <test started-at="2023-08-06T10:07:43 IST" name="Default test" finished-at="2023-08-06T10:08:15 IST" duration-ms="31834">
+      <class name="com.yatra.qa.TestCase.TestHoliday">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.yatra.qa.TestCase.TestHoliday@57a3af25]" started-at="2023-08-06T10:07:43 IST" name="setup" finished-at="2023-08-06T10:07:49 IST" duration-ms="6461" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Setup -->
-        <test-method signature="loginTest()[pri:3, instance:com.yatra.qa.TestCase.LoginPageTest@738dc9b]" started-at="2023-07-26T20:56:46 PDT" name="loginTest" finished-at="2023-07-26T20:56:51 PDT" duration-ms="5020" status="PASS">
+        </test-method> <!-- setup -->
+        <test-method signature="holidayinit()[pri:0, instance:com.yatra.qa.TestCase.TestHoliday@57a3af25]" started-at="2023-08-06T10:07:49 IST" name="holidayinit" finished-at="2023-08-06T10:08:09 IST" duration-ms="19567" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- loginTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.yatra.qa.TestCase.LoginPageTest@738dc9b]" started-at="2023-07-26T20:56:51 PDT" name="tearDown" finished-at="2023-07-26T20:56:51 PDT" duration-ms="2" status="PASS">
+        </test-method> <!-- holidayinit -->
+        <test-method signature="paymentPg()[pri:0, instance:com.yatra.qa.TestCase.TestHoliday@57a3af25]" started-at="2023-08-06T10:08:09 IST" name="paymentPg" finished-at="2023-08-06T10:08:15 IST" duration-ms="5768" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- com.yatra.qa.TestCase.LoginPageTest -->
+        </test-method> <!-- paymentPg -->
+      </class> <!-- com.yatra.qa.TestCase.TestHoliday -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
