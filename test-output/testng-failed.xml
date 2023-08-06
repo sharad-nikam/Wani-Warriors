@@ -3,15 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.yatra.qa.TestCase.LoginPageTest">
+      <class name="com.yatra.qa.TestCase.TestHoliday">
         <methods>
-          <include name="tearDown"/>
-          <include name="loginPageTitleTest"/>
-          <include name="loginPageLogo"/>
-          <include name="Setup"/>
-          <include name="loginTest"/>
+          <include name="paymentPg"/>
+          <include name="setup"/>
+          <include name="holidayinit"/>
         </methods>
-      </class> <!-- com.yatra.qa.TestCase.LoginPageTest -->
+      </class> <!-- com.yatra.qa.TestCase.TestHoliday -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
