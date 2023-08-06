@@ -1,4 +1,4 @@
-package com.yatra.qa.testpages;
+package com.yatra.qa.testCase;
 
 import org.testng.Assert;
 import org.testng.annotations.AfterTest;
