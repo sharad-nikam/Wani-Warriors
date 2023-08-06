@@ -8,6 +8,7 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.events.EventFiringWebDriver;
 
@@ -24,6 +25,13 @@ public class TestBase {
 	public  static EventFiringWebDriver e_driver;
 	public static WebEventListener eventListener;
 	
+	
+	
+	
+	public   String dCity = "Pune";
+	public   String aCity = "Chennai";
+	public   String tDate = "29/04/2024";
+	
 	public TestBase(){
 		try {
 			prop = new Properties();
@@ -34,6 +42,9 @@ public class TestBase {
 			e.printStackTrace();
 		} catch (IOException e) {
 			e.printStackTrace();
+			
+		}catch(NullPointerException e) {
+		e.printStackTrace();
 		}
 	}
 	
@@ -41,9 +52,17 @@ public class TestBase {
 	public  void initialization(){
 		String browserName = prop.getProperty("browser");
 		
+		
+		
 		if(browserName.equals("chrome")){
 			WebDriverManager.chromedriver().setup();
-			  driver = new ChromeDriver();
+			ChromeOptions opt = new ChromeOptions();
+			opt.addArguments("disable-notifications");
+			opt.setExperimentalOption("excludeSwitches", new String[] { "enable-automation" });
+			driver = new ChromeDriver(opt);
+			 // driver = new ChromeDriver();
+			  
+			  
 			//System.setProperty("webdriver.chrome.driver", "/Users/naveenkhunteta/Downloads/chromedriver");	
 			//driver = new ChromeDriver(); 
 		}
@@ -52,7 +71,11 @@ public class TestBase {
 			driver = new FirefoxDriver(); 
 		}
 		
-		
+		e_driver = new EventFiringWebDriver(driver);
+		// Now create object of EventListerHandler to register it with EventFiringWebDriver
+		eventListener = new WebEventListener();
+		e_driver.register(eventListener);
+		driver = e_driver;
 		 
 		
 		driver.manage().window().maximize();
