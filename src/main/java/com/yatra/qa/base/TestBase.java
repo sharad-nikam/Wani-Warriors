@@ -32,13 +32,14 @@ public class TestBase {
 			e.printStackTrace();
 		} catch (IOException e) {
 			e.printStackTrace();
+			
+		}catch(NullPointerException e) {
+		e.printStackTrace();
 		}
 	}
 
 	public void initialization()     {
 		String browserName = prop.getProperty("browser");
-
-		if (browserName.equals("chrome")) {
 			WebDriverManager.chromedriver().setup();
 			ChromeOptions opt = new ChromeOptions();
 			opt.addArguments("disable-notifications");
@@ -52,7 +53,6 @@ public class TestBase {
 		eventListener = new WebEventListener();
 		e_driver.register(eventListener);
 		driver = e_driver;
-		
 		
 		driver.manage().window().maximize();
 		driver.manage().deleteAllCookies();
