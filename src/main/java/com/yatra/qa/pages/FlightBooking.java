@@ -1,7 +1,5 @@
 package com.yatra.qa.pages;
 
-import java.time.Duration;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
@@ -106,27 +104,7 @@ public class FlightBooking extends TestBase {
 
 	public void oneWayFlightsrc() {
 		flightTab.click();
-
 		oneWay.click();
-
-		// origin.click();
-		// WebElement o1=driver.findElement(By.xpath("//input[@class=\"required_field
-		// cityPadRight ac_input origin_ac\"]"));
-		// o1.sendKeys("Pune");
-//		origin.sendKeys(dCity);
-//
-//		driver.findElement(By.xpath("//span[normalize-space()='" + dCity + "']")).click();
-
-//		source.click();
-//		source.sendKeys(aCity);
-//		driver.findElement(By.xpath("//span[normalize-space()='" + aCity + "']")).click();
-
-//		oDate.click();
-//		oDate.sendKeys(tDate);
-//
-//		pBox.click();
-		
-
 	}
 
 	public void selcF1(String dCity) {

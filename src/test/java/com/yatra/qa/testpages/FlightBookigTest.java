@@ -2,10 +2,8 @@ package com.yatra.qa.testpages;
 
 import org.testng.Assert;
 import org.testng.annotations.AfterTest;
-
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
-
 import com.yatra.qa.base.TestBase;
 import com.yatra.qa.pages.FlightBooking;
 import com.yatra.qa.pages.SignUp;
