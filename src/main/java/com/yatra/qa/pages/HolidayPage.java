@@ -151,7 +151,9 @@ public class HolidayPage extends TestBase {
 		
 		  @FindBy(xpath="//input[@id='payNow']")
 			WebElement payNow;
-		  JavascriptExecutor jse;
+  
+	JavascriptExecutor jse;
+
 	public HolidayPage() {
 		//return driver.getTitle();
 		PageFactory.initElements(driver, this);

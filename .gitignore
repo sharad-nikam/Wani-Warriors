@@ -1,2 +1,12 @@
 /target/
 /bin/
+.png
+.html
+screenshots/
+*.log
+!example.log
+.js
+.txt
+.css
+/test-output/
+

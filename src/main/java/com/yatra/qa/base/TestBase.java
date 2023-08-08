@@ -27,9 +27,7 @@ public class TestBase {
 	public String dCity = "Pune";
 	public String aCity = "Chennai";
 	public String tDate = "28/08/2023";
-	
-	
-	public TestBase() {
+	public TestBase() {	
 		try {
 			prop = new Properties();
 			FileInputStream ip = new FileInputStream(
@@ -50,8 +48,9 @@ public class TestBase {
 		String browserName = prop.getProperty("browser");
 			WebDriverManager.chromedriver().setup();
 			
-		
-			if(browserName.equals("chrome")){
+
+		if(browserName.equals("chrome")){
+
 				WebDriverManager.chromedriver().setup();
 				ChromeOptions opt = new ChromeOptions();
 				opt.addArguments("disable-notifications");
@@ -63,10 +62,13 @@ public class TestBase {
 				//System.setProperty("webdriver.chrome.driver", "/Users/naveenkhunteta/Downloads/chromedriver");	
 				//driver = new ChromeDriver(); 
 			}
+
 			else if(browserName.equals("edge")){
 				WebDriverManager.edgedriver().setup();	
 				driver = new EdgeDriver(); 
 			}
+
+			
 		
 			e_driver = new EventFiringWebDriver(driver);
 			// Now create object of EventListerHandler to register it with EventFiringWebDriver
