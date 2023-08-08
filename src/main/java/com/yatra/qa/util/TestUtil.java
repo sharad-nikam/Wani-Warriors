@@ -14,9 +14,12 @@ import com.yatra.qa.base.TestBase;
 
 public class TestUtil extends TestBase {
 
-	public static long PAGE_LOAD_TIMEOUT = 20;
+	public static long PAGE_LOAD_TIMEOUT = 50;
 	public static long IMPLICIT_WAIT = 50;
 	static JavascriptExecutor js;
+//	public String dCity = "Pune";
+//	public String aCity = "Chennai";
+//	public String tDate = "28/08/2023";
 
 	public static void takeScreenshotAtEndOfTest() throws IOException {
 		File scrFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);

@@ -1,6 +1,7 @@
 package com.yatra.qa.TestCase;
 
 import org.testng.Assert;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
@@ -37,6 +38,13 @@ public class TestHoliday extends TestBase{
 		Assert.assertTrue(hp.verifyUPIpayment(), "UPI Payment Tab missing on the page");
 		Assert.assertTrue(hp.verifyCCpayment(), "CC Payment Tab missing on the page");
 		Assert.assertTrue(hp.verifyPayNow(), "PayNow Button missing on the page");
+
+	}
+	
+	@AfterClass
+	public void tearDown() {
+		
+		driver.close();
 
 	}
 	

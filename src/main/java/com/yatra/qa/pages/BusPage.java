@@ -23,15 +23,16 @@ public class BusPage extends TestBase{
 	@FindBy(xpath=("//input[contains(@name,'bus_leaving')]"))
 			WebElement depart;
 	
-	@FindBy(xpath=("(//span[normalize-space()='Pune'])[1]"))
-	//@FindBy(xpath=("//*[@id=\"booking_engine_modues\"]/div/div[1]/div[2]/ul[1]/li[1]/div/div/ul/div/div/div/li[8]"))
+	//@FindBy(xpath=("(//span[normalize-space()='Pune'])[1]"))
+	@FindBy(xpath=("(//li[@class='active ac_over'])[1]"))
 			WebElement departcity;
 	
 	//@FindBy(xpath=("//input[contains(@name,'bus_dest')]"))
-	@FindBy(xpath=("//input[@id='BE_bus_to_station']"))
+	@FindBy(xpath=("(//input[@name='bus_dest'])[1]"))
 			WebElement to;
 	
-	@FindBy(xpath=("(//span[normalize-space()='Mumbai'])[1]"))
+	//@FindBy(xpath=("(//span[normalize-space()='Mumbai'])[1]"))
+	@FindBy(xpath=("(//li[@class='active ac_over'])[1]"))
 			WebElement tocity;
 	
 	@FindBy(xpath=("//input[contains(@name,'bus_depart_date')]"))
@@ -52,7 +53,7 @@ public class BusPage extends TestBase{
 	WebElement upperdeck;
 	
 	//@FindBy(xpath=("//body/div[@id='busDesktop']/div[1]/div[6]/div[867]/div[1]/section[1]/div[1]/div[1]/div[2]/div[1]/div[2]/div[1]/div[1]/div[1]/ul[5]/li[2]/i[1]"))
-	@FindBy(xpath=("//li[@snum='S14']"))
+	@FindBy(xpath=("//li[@snum='S15']"))
 	WebElement seat;
 	
 	@FindBy(xpath=("//*[@id=\"city\"]/div/div/div[1]/div/select"))
@@ -110,13 +111,13 @@ public class BusPage extends TestBase{
 		
 		busClick.click();
 		depart.click();
-		depart.sendKeys("pune");
+		depart.sendKeys("Pune");
 		
 		departcity.click();
 		
 		
 		to.click();
-		//tocity.sendKeys("mumbai");
+		to.sendKeys("Mumbai");
 		tocity.click();
 		departdate.click();
 		searchbuses.click();
