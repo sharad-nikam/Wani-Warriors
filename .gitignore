@@ -1,7 +1,6 @@
 /target/
 .png
 .html
-.xml
 screenshots/
 *.log
 !example.log
