@@ -17,28 +17,32 @@ public class BusPage extends TestBase{
 	}
 	
 	
-	@FindBy(xpath=("//a[@id='booking_engine_buses']"))
+	@FindBy(xpath=("//a[contains(@id,'booking_engine_buses')]"))
 	WebElement busClick;
 	
 	@FindBy(xpath=("//input[contains(@name,'bus_leaving')]"))
 			WebElement depart;
 	
-	//@FindBy(xpath=("(//span[normalize-space()='Pune'])[1]"))
-	@FindBy(xpath=("(//li[@class='active ac_over'])[1]"))
-			WebElement departcity;
+	
+	@FindBy(xpath=("//div[contains(@class,'smooth-banner-transition')]//li[8]//span[1]"))
+	//span[contains(text(),'Pune')]
+	WebElement departcity;
 	
 	//@FindBy(xpath=("//input[contains(@name,'bus_dest')]"))
-	@FindBy(xpath=("(//input[@name='bus_dest'])[1]"))
+	@FindBy(xpath=("//input[contains(@name,'bus_dest')]"))
+	//input[@name='bus_dest']
 			WebElement to;
 	
 	//@FindBy(xpath=("(//span[normalize-space()='Mumbai'])[1]"))
-	@FindBy(xpath=("(//li[@class='active ac_over'])[1]"))
+	@FindBy(xpath=("//li[contains(@class,'flex1 autoCompleteInputCode destAutoSugestField safariFix__field activeBox')]//li[2]"))
+	
+	
 			WebElement tocity;
 	
 	@FindBy(xpath=("//input[contains(@name,'bus_depart_date')]"))
 			WebElement departdate;
 	
-	@FindBy(xpath=("//td[@data-date='18/08/2023']"))
+	@FindBy(xpath=("//td[@data-date='08/09/2023']"))
 			WebElement searchbuses;
 	
 	@FindBy(xpath=("//input[@id='BE_bus_search_btn']"))
@@ -46,14 +50,14 @@ public class BusPage extends TestBase{
 	
 	
 	
-	@FindBy(xpath=("(//div[text()='Select Seat'])[4]"))
+	@FindBy(xpath=("(//div[contains(text(),'Select Seat')])[4]"))
 	WebElement selectSet;
 	
 	@FindBy(xpath=("//a[normalize-space()='Upper Deck']"))
 	WebElement upperdeck;
 	
 	//@FindBy(xpath=("//body/div[@id='busDesktop']/div[1]/div[6]/div[867]/div[1]/section[1]/div[1]/div[1]/div[2]/div[1]/div[2]/div[1]/div[1]/div[1]/ul[5]/li[2]/i[1]"))
-	@FindBy(xpath=("//li[@snum='S15']"))
+	@FindBy(xpath=("//li[@snum='C']"))
 	WebElement seat;
 	
 	@FindBy(xpath=("//*[@id=\"city\"]/div/div/div[1]/div/select"))
@@ -111,13 +115,13 @@ public class BusPage extends TestBase{
 		
 		busClick.click();
 		depart.click();
-		depart.sendKeys("Pune");
+		//depart.sendKeys("Pune");
 		
 		departcity.click();
 		
 		
 		to.click();
-		to.sendKeys("Mumbai");
+		//to.sendKeys("Mumbai");
 		tocity.click();
 		departdate.click();
 		searchbuses.click();
