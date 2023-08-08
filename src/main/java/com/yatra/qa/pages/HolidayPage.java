@@ -151,7 +151,7 @@ public class HolidayPage extends TestBase {
 		
 		  @FindBy(xpath="//input[@id='payNow']")
 			WebElement payNow;
-	
+		  JavascriptExecutor jse;
 	public HolidayPage() {
 		//return driver.getTitle();
 		PageFactory.initElements(driver, this);
@@ -189,6 +189,7 @@ public class HolidayPage extends TestBase {
 	
 	public void flagMenu()
 	{
+		
 		jse=(JavascriptExecutor)driver;
 		jse.executeScript("window.scrollBy(0,2000)", "");
 		flag.click();

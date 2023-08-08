@@ -36,7 +36,7 @@ public class BusTest extends TestBase{
 	}//
 	@AfterClass
 	public void tearDown() {
-		//driver.close();
+		driver.close();
 	}
 
 }

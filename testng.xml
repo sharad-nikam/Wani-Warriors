@@ -3,10 +3,12 @@
 <suite name="Suite">
   <test thread-count="5" name="Test">
     <classes>
-      <!--class name="com.yatra.qa.TestCase.SignUpTest"/-->
-      <!--class name="com.yatra.qa.TestCase.LoginPageTest"/-->
-      
+      <class name="com.yatra.qa.TestCase.SignUpTest"/>
+      <class name="com.yatra.qa.TestCase.LoginPageTest"/>
+      <class name="com.yatra.qa.TestCase.FlightBookingTest"/>
+      <class name="com.yatra.qa.TestCase.TC_01_HotelBooking"/>
       <class name="com.yatra.qa.TestCase.TestHoliday"/>
+      <class name="com.yatra.qa.TestCase.BusTest"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

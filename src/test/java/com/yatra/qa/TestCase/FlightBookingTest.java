@@ -3,26 +3,26 @@ package com.yatra.qa.TestCase;
 
 
 	import org.testng.Assert;
-	import org.testng.annotations.AfterTest;
-	import org.testng.annotations.BeforeTest;
-	import org.testng.annotations.Test;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Test;
 
-	import com.yatra.qa.base.TestBase;
-	import com.yatra.qa.pages.FlightBooking;
-	//import com.yatra.qa.pages.SignUp;
-	import com.yatra.qa.util.TestUtil;
+import com.yatra.qa.base.TestBase;
+import com.yatra.qa.pages.FlightBooking;
+import com.yatra.qa.pages.SignUpPage;
+import com.yatra.qa.util.TestUtil;
 
 	public class FlightBookingTest extends TestBase {
 
 		FlightBooking fl;
 		TestUtil testUtil;
-		//SignUp signup;
+		//SignUpPage signup;
 
 		public FlightBookingTest() {
 			super();
 		}
 
-		@BeforeTest
+		@BeforeClass
 		public void setUp() throws InterruptedException {
 			initialization();
 			fl = new FlightBooking();
@@ -48,7 +48,7 @@ package com.yatra.qa.TestCase;
 		@Test(priority = 3)
 		public void flightUserDetails() {
 
-			fl.oneWayFlightuserD();
+			fl.oneWayFlightuserD(); 
 		}
 
 		@Test(priority = 4)
@@ -60,8 +60,10 @@ package com.yatra.qa.TestCase;
 
 		}
 
-		@AfterTest
+		@AfterClass
 		public void tearDown() {
+			
+			driver.close();
 
 		}
 
