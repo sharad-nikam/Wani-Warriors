@@ -60,6 +60,6 @@ public class TC_01_HotelBooking extends TestBase {
 	
 	@AfterClass
 	public void tearDown() {
-		driver.close();
+		driver.quit();
 	}
 }
