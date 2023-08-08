@@ -1,5 +1,6 @@
 package com.yatra.qa.pages;
 
+import java.time.Duration;
 import java.util.Iterator;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
@@ -14,6 +15,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.annotations.Test;
 
 import com.yatra.qa.base.TestBase;
 import com.yatra.qa.util.TestUtil;
@@ -30,6 +32,7 @@ public class HotelBooking extends TestBase{
 //		PageFactory.initElements(rdriver, this);
 //		this.actions= new Actions(ldriver);
 	public HotelBooking(){
+		
 		PageFactory.initElements(driver,this);
 	
 	}
@@ -94,13 +97,16 @@ public class HotelBooking extends TestBase{
 	//WebElement booknow;
 	//button[@class='new-blue-button newBtn  choose-room-button '])[1]
 	
-	@FindBy(xpath="//input[@id='additionalContactEmail']")
+	//@FindBy(xpath="//input[@id='additionalContactEmail']")
+	@FindBy(xpath="//input[@class='form-control ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required ng-valid-pattern']")
 	WebElement email;
 	
 	@FindBy(xpath="//input[@id='additionalContactMobile']")
 	WebElement mobile;
 	
-	@FindBy(xpath="select[@class='ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required']")
+	
+	
+	@FindBy(xpath="//select[@class='ng-pristine ng-empty ng-invalid ng-invalid-required ng-touched']")
 	WebElement title;
 	
 	@FindBy(xpath="//option[@value='Mr']")
@@ -112,6 +118,9 @@ public class HotelBooking extends TestBase{
 	@FindBy(xpath="//input[@name='lname0']")
 	WebElement lname;
 	
+	@FindBy(xpath="//textarea[@class='ng-pristine ng-untouched ng-valid ng-empty']")
+	WebElement sperequest;
+	
 	@FindBy(xpath="//button[@class='button primary rounded contn-btn new-btn ng-binding']")
 	WebElement contn;
 	
@@ -119,8 +128,44 @@ public class HotelBooking extends TestBase{
 	WebElement CheckA;
 	
 	
+	@FindBy(xpath="//a[@id='cc']")
+	WebElement creditcard;
+	
+	@FindBy(xpath="//input[@id='cc_cno_id']")
+	WebElement cardno;
+	
+	@FindBy(xpath="//input[@id='cc_cardholder_name_id']")
+	WebElement cardname;
+	
+	@FindBy(xpath="//option[@value=\"05\"]")
+	WebElement emonth;
+	
+	@FindBy(xpath="//option[@value='2024']")
+	WebElement eyear;
+	
+	@FindBy(xpath="//input[@id='cc_cvv_id']")
+	WebElement cvv;
+	
+	/*
+	
+	@FindBy(xpath="//a[@id='dc']")
+	WebElement debitcard;
+	
+	@FindBy(xpath="//a[@id='nb']")
+	WebElement netbanking;
+	
+	@FindBy(xpath="//a[@id='tez']")
+	WebElement gpay;
+	
+	@FindBy(xpath="//a[@id='mw']")
+	WebElement mobilewallet;
+	
+	
+*/
 	
 	public void hotelBooking()  {
+		
+		
 		hotelClick.click();
 		
 		city.click();
@@ -189,6 +234,7 @@ public class HotelBooking extends TestBase{
 			 
 			 
 			 
+			 
 //			 WebDriverWait wait = new WebDriverWait(driver, 10);
 //			 booknow = wait.until(ExpectedCondition.elementToBeClickable());
 //			 
@@ -210,7 +256,7 @@ public class HotelBooking extends TestBase{
 			
 					
 		public void roomBookml(String mail) {
-			
+		/*	
 			driver.manage().timeouts().pageLoadTimeout(TestUtil.PAGE_LOAD_TIMEOUT, TimeUnit.SECONDS);
 			driver.manage().timeouts().implicitlyWait(TestUtil.IMPLICIT_WAIT, TimeUnit.SECONDS);
 			driver.switchTo().frame("notification-frame-173058b31");
@@ -220,21 +266,25 @@ public class HotelBooking extends TestBase{
 			
 			JavascriptExecutor js = (JavascriptExecutor)driver;
 			 js.executeScript("arguments[0].scrollIntoView();", booknow);
+			 
 			//js.executeScript("window.scrollBy(0,1000)","");
 		
-			 
+			 */
 			email.click();
 			email.sendKeys(mail);
+			
 		}
 		public void roomBookph(String ph) {
 			
 			mobile.sendKeys(ph);
+			//title.click();
+			option.click();
 		}
 		
 		
 		public void fName(String fn) {
 			
-			CheckA.click();
+			//CheckA.click();
 			fname.sendKeys(fn);
 		}
 	
@@ -242,12 +292,32 @@ public class HotelBooking extends TestBase{
 		public void lName(String ln) {
 			
 			lname.sendKeys(ln);
-			title.click();
-			option.click();
+			//sperequest.click();
+			sperequest.sendKeys("jsajgjghgjgj");
+			
 			contn.click();
 			
 			
 		}
+		
+		
+		public void payment() {
+			
+			creditcard.click();
+			cardno.sendKeys("854862154875");
+			cardname.sendKeys("Raj Sakhare");
+			emonth.click();
+			eyear.click();
+			cvv.sendKeys("123");
+			
+			
+			
+//			debitcard.click();
+//			netbanking.click();
+//			gpay.click();
+//			mobilewallet.click();
+			
 	
 			}
+}
 
