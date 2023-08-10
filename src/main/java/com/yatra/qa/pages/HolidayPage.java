@@ -52,7 +52,7 @@ public class HolidayPage extends TestBase {
 	@FindBy(xpath = "//a[contains(text(),'Price')]")
 	WebElement sortBy;
 	
-	@FindBy(linkText = "Chalo Dubai")
+	@FindBy(linkText = "//a[contains(text(),'Chalo Dubai')]/following::button[1]")
 	WebElement flag;
 	
 	@FindBy(xpath = "//button[text()='Book Now']")
