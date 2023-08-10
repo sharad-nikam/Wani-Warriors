@@ -99,7 +99,12 @@ public class BusPage extends TestBase{
 	@FindBy(xpath=("(//div[@class='v-btn__content'])[1]"))
 	WebElement proceed;
 	
+	@FindBy(css=(" input#payerVA"))
+	WebElement paymentAddress;
 	
+	
+	@FindBy(css=("input#payNow"))
+	WebElement payNow;
 	
 	
 	public void busBooking() {
@@ -127,6 +132,9 @@ public class BusPage extends TestBase{
 		searchbuses.click();
 		searchbusesbtn.click();
 		
+		
+	}
+	public void seatBooking() {
 		selectSet.click();
 		upperdeck.click();
 		seat.click();
@@ -142,11 +150,14 @@ public class BusPage extends TestBase{
 		//select1.selectByVisibleText("Parel");
 		
 		booknow.click();
+		
+	}
+	public void seatPreferences() {
 		email.click();
 		email.sendKeys("waniwarriers@gmail.com");
 		mobile.click();
 		mobile.sendKeys("9897864546");
-		
+		 
 		travelername.click();
 		travelername.sendKeys("Wani Warriers");
 		
@@ -156,6 +167,14 @@ public class BusPage extends TestBase{
 		age.click();
 		age1.click();
 		proceed.click();
+	}
+	public BusPage  paymentMethod(String add) {
+		
+		paymentAddress.sendKeys(add);
+		payNow.click();
+		
+		
+		return  new BusPage();
 		
 		
 		
