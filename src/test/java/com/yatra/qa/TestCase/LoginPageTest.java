@@ -39,8 +39,8 @@ public class LoginPageTest extends TestBase {
 	//}
 	
 	@Test(priority=3)
-	public void loginTest() throws InterruptedException {
-		Thread.sleep(1000);
+	public void loginTest()   {
+		 
 		buspage = loginpage.login(prop.getProperty("username"), prop.getProperty("password"));
 				
 	}//

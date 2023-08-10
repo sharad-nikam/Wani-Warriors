@@ -27,6 +27,7 @@ public class TestBase {
 	public String dCity = "Pune";
 	public String aCity = "Chennai";
 	public String tDate = "28/08/2023";
+	
 	public TestBase() {	
 		try {
 			prop = new Properties();

@@ -48,14 +48,14 @@ public class LoginPage extends TestBase {
 //	public boolean validateYatralogo() {
 //		return yatralogo.isDisplayed();
 //	}
-	public BusPage login(String un, String ps) throws InterruptedException {
+	public BusPage login(String un, String ps)   {
 		Actions s=new Actions(driver);
 		s.moveToElement(myacc).build().perform();
 		loginClick.click();
 		emailid.sendKeys(un);
 		continuebtn.click();
-		//driver.manage().timeouts().implicitlyWait(TestUtil.IMPLICIT_WAIT, TimeUnit.SECONDS);
-		Thread.sleep(1000);
+		driver.manage().timeouts().implicitlyWait(TestUtil.IMPLICIT_WAIT, TimeUnit.SECONDS);
+		 
 		password.sendKeys(ps);
 		loginbtn.click();
 		

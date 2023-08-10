@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2023-08-10T21:05:10 IST" name="Default suite" finished-at="2023-08-10T21:06:09 IST" duration-ms="58235">
+    <groups>
+    </groups>
+    <test started-at="2023-08-10T21:05:10 IST" name="Default test" finished-at="2023-08-10T21:06:09 IST" duration-ms="58235">
+      <class name="com.yatra.qa.TestCase.BusTest">
+        <test-method is-config="true" signature="Setup()[pri:0, instance:com.yatra.qa.TestCase.BusTest@2e8c1c9b]" started-at="2023-08-10T21:05:10 IST" name="Setup" finished-at="2023-08-10T21:05:25 IST" duration-ms="14817" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Setup -->
+        <test-method signature="bookBusTicket()[pri:1, instance:com.yatra.qa.TestCase.BusTest@2e8c1c9b]" started-at="2023-08-10T21:05:25 IST" name="bookBusTicket" finished-at="2023-08-10T21:05:41 IST" duration-ms="15343" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- bookBusTicket -->
+        <test-method signature="bookBusSeat()[pri:2, instance:com.yatra.qa.TestCase.BusTest@2e8c1c9b]" started-at="2023-08-10T21:05:41 IST" name="bookBusSeat" finished-at="2023-08-10T21:05:47 IST" duration-ms="6260" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- bookBusSeat -->
+        <test-method signature="bookBusSeatPreferences()[pri:3, instance:com.yatra.qa.TestCase.BusTest@2e8c1c9b]" started-at="2023-08-10T21:05:47 IST" name="bookBusSeatPreferences" finished-at="2023-08-10T21:05:53 IST" duration-ms="6201" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- bookBusSeatPreferences -->
+        <test-method signature="bookPaymentMethod()[pri:4, instance:com.yatra.qa.TestCase.BusTest@2e8c1c9b]" started-at="2023-08-10T21:05:53 IST" name="bookPaymentMethod" finished-at="2023-08-10T21:06:09 IST" duration-ms="15501" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- bookPaymentMethod -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.yatra.qa.TestCase.BusTest@2e8c1c9b]" started-at="2023-08-10T21:06:09 IST" name="tearDown" finished-at="2023-08-10T21:06:09 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.yatra.qa.TestCase.BusTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
