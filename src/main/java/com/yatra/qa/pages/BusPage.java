@@ -57,7 +57,7 @@ public class BusPage extends TestBase{
 	WebElement upperdeck;
 	
 	//@FindBy(xpath=("//body/div[@id='busDesktop']/div[1]/div[6]/div[867]/div[1]/section[1]/div[1]/div[1]/div[2]/div[1]/div[2]/div[1]/div[1]/div[1]/ul[5]/li[2]/i[1]"))
-	@FindBy(xpath=("//li[@snum='S13']"))
+	@FindBy(xpath=("//li[@snum='C']"))
 	WebElement seat;
 	
 	@FindBy(xpath=("//*[@id=\"city\"]/div/div/div[1]/div/select"))
@@ -99,14 +99,12 @@ public class BusPage extends TestBase{
 	@FindBy(xpath=("(//div[@class='v-btn__content'])[1]"))
 	WebElement proceed;
 	
-	
 	@FindBy(css=(" input#payerVA"))
 	WebElement paymentAddress;
 	
 	
 	@FindBy(css=("input#payNow"))
 	WebElement payNow;
-	
 	
 	
 	public void busBooking() {

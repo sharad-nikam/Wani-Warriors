@@ -6,7 +6,7 @@ import org.testng.annotations.Test;
 
 import com.yatra.qa.base.TestBase;
 import com.yatra.qa.pages.BusPage;
-import com.yatra.qa.pages.LoginPage;
+//import com.yatra.qa.pages.LoginPage;
 import com.yatra.qa.util.TestUtil;
 
 public class BusTest extends TestBase{
@@ -51,7 +51,6 @@ public class BusTest extends TestBase{
 		
 		buspage = buspage.paymentMethod(prop.getProperty("vAddress"));
 	}
-	
 	@AfterClass
 	public void tearDown() {
 		driver.close();
