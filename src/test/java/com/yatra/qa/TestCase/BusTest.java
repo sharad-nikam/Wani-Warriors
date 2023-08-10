@@ -28,12 +28,30 @@ public class BusTest extends TestBase{
 
 
 	
-	@Test
-	public void loginTest() {
+	@Test(priority=1)
+	public void bookBusTicket() {
 		buspage.busBooking();
 		
 		
 	}//
+	
+	@Test(priority=2)
+	public void bookBusSeat() {
+		buspage.seatBooking();
+	}
+	
+	@Test(priority=3)
+	public void bookBusSeatPreferences() {
+		buspage.seatPreferences();
+	}
+	
+	@Test(priority=4)
+	public void bookPaymentMethod() {
+		//buspage.paymentMethod(vAddress);
+		
+		buspage = buspage.paymentMethod(prop.getProperty("vAddress"));
+	}
+	
 	@AfterClass
 	public void tearDown() {
 		driver.close();
