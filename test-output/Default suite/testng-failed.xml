@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.yatra.qa.TestCase.BusTest">
+      <class name="com.yatra.qa.TestCase.LoginPageTest">
         <methods>
-          <include name="Setup"/>
           <include name="tearDown"/>
-          <include name="bookPaymentMethod"/>
+          <include name="Setup"/>
+          <include name="loginTest"/>
         </methods>
-      </class> <!-- com.yatra.qa.TestCase.BusTest -->
+      </class> <!-- com.yatra.qa.TestCase.LoginPageTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
